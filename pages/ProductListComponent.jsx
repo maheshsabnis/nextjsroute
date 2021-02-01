@@ -52,17 +52,8 @@ const ProductListComponent=(props)=> {
                           }
                           <td>
                            <button className="btn btn-warning">
-                                    <Link href={`/EditProductComponent/${prd.ProductRowId}`} >Edit</Link>
-                                    {/* <span
-      onClick={() => {
-        router.push({
-          pathname: '/EditProductComponent/[pid]',
-          query: { pid: prd.ProductRowId },
-        })
-      }}
-    >
-      Click here to read more
-    </span> */}
+                                    <Link href={`/EditProductComponent?${prd.ProductRowId}`} >Edit</Link>
+                                     
                            </button>
                            
                           </td>

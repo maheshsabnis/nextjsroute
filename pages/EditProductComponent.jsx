@@ -15,10 +15,12 @@ const EditProductComponent=(props)=> {
     const {id} = router.query;                                           
      
     useEffect(()=> {
-        let d = router.query;
-        alert('d =  ' + d);
-        const id = router.query;
-        service.getDataById(id).then(response=> {
+        let d =  router.query;
+        alert('d =  ' + JSON.stringify(d));
+        const x = Object.keys(d)[0];
+        alert('x  = ' + x);
+        const id =  router.query;
+        service.getDataById(x).then(response=> {
             updateProduct(response.data);
         }).catch(error=>{
             console.log(`Error Occured ${error}`);

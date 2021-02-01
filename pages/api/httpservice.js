@@ -10,6 +10,11 @@ export class HttpService {
         return response; 
     }
 
+    getDataById(id){
+        let response =  axios.get(`${this.url}/${id}`);
+        return response; 
+    }
+
     postData(prd){
         let response = axios.post(this.url, prd, {
             'Content-Type': 'application/json' 
